@@ -1,0 +1,172 @@
+
+
+$white:#fff;
+$black: black;
+$green: #50E3C2;
+$font_color: #572EE5;
+$bg_menu:rgba(87,46,229,0.90);
+$bg_trending: #F3F5F8;
+$hover_cards: rgba(87,46,229,0.60);
+$active_color:#9CAFC3;
+
+$bgc_dark: #37383C;
+$font_color_dark: white;
+$bg_trending_dark: #222326;
+
+$Proxima-Bold: "ProximaNova-Bold";
+$Proxima-Regular: "ProximaNova-Regular";
+$Roboto: 'Roboto', sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+$font_gifos: 'gifOs';
+
+
+@mixin h1_mobile {
+  font-family: "ProximaNova-Bold";
+  font-size: 1.5625em;
+  color: $font_color;
+  letter-spacing: 0;
+  line-height: 33px;
+  font-weight: 700;
+}
+
+
+@mixin h1_laptop {
+  font-family: "ProximaNova-Bold";
+  font-size: 2.1875em;
+  color: $font_color;
+  letter-spacing: 0;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+@mixin h2_mobile {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: $font_color;
+  letter-spacing: 0;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+@mixin h2_laptop {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5625em;
+  color: $font_color;
+  letter-spacing: 0;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+@mixin h3_mobile {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  color: $font_color;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+
+}
+
+@mixin h3_laptop {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: $font_color;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+}
+
+@mixin h4_mobile {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875em;
+  color: $font_color;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 25px;
+
+}
+
+@mixin h4_laptop {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: $font_color;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 25px;
+}
+
+
+@mixin paragraph_mobile {
+  font-family: 'Roboto', sans-serif;
+  color: $black;
+  letter-spacing: 0;
+  line-height: 15px;
+  font-weight: normal;
+}
+
+
+@mixin paragraph_laptop {
+font-family: 'Roboto', sans-serif;
+color: $black;
+letter-spacing: 0;
+line-height: 15px;
+font-weight: 400;
+
+}
+
+@mixin more_button {
+    position: relative;
+    border: 1px solid $font-color;
+    border-radius: 25px;
+    color: $font-color;
+    background-color: $white;
+    width: 8em;
+    height: 3.125em;
+    margin: 4em;
+    font-family: $Montserrat;
+    font-size: 0.8em;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+
+@mixin new_gifo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: unset;
+    right: 7%; 
+    top: 1em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2.3em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin buttons_dark {
+    background-color: $bgc_dark;
+    color: $white;
+    border: 1px solid $white;
+    cursor: pointer;
+}
+
+@mixin buttons_dark_hover {
+  background-color: $white;
+  color: $bgc_dark;
+  cursor: pointer;
+
+}

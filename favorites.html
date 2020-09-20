@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: gifOS - DianaP3</title>
+    <meta name="title" content="Proyecto gifOS">
+    <meta name="description" content="Proyecto: gifOS">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="icon" sizes="32x32" href="./assets/logo-desktop.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/gifos_font.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <div class="content">
+
+        <header class="header" id="header">
+            <hr class="header__hr">
+            <nav class="header__navbar">
+                <a href="index.html" class="header__navbar--logo"></a>
+                <input class="header__navbar--checkbox" type="checkbox">
+                <img class="header__navbar--ham-menu" src="./assets/burger.svg" alt="Menú">
+                <img class="header__navbar--close-ham-menu" src="./assets/close.svg" alt="Menú">
+                <div class="header__navbar--menu">
+                    <ul class="list">
+                        <li class="list__item"><a class="dark_mode"><span id="dark_ligth">Modo Nocturno</span></a></li>
+                        <li class="list__item"><a href="#"><span class="current_link">Favoritos</span></a></li>
+                        <li class="list__item"><a href="mygifos.html">Mis GIFOS</a></li>
+                    </ul>
+                </div>
+                <a  class="header__navbar--new_gifo" href="newgifo.html"> + </a>
+            </nav>
+
+
+        </header>
+
+        <main>
+            <section class="fav" id="fav"> 
+
+                <img class="fav__image" src="./assets/icon-favoritos.svg" alt="Mis Gifos Favoritos">
+                <h2 class="fav__title">Favoritos</h2>
+
+            </section>
+            
+            <section class="search__noResults--h3 hidden" id="favNoContent" >
+                <div class="favNoContent__div">
+                    <img class="favNoContent__image" src="./assets/sinfavoritos.png" alt="Mis Gifos Favoritos">
+                </div>
+                <h2 class="favNoContent__title">"¡Guarda tu primer GIFO en Favoritos 
+                    para que se muestre aquí!"</h2>
+            </section>
+        
+            <section class="favResults" id="favResults">
+                <div class="favResultsGrid" id="favResultsGrid">
+                   
+                    <!-- divFavGridContainer -->
+                    
+                </div>
+                <button class="favResults__button" id="favResultsButton">Ver más</button>
+
+            </section>
+
+            <section class="trending" id="trending" >
+                <div>
+                    <h2 class="trending__h2">
+                        Trending GIFOS
+                    </h2>
+                    <p class="trending__p--mobile">
+                        Mira los últimos <br />GIFOS de nuestra comunidad.
+                    </p>
+                    <p class="trending__p--laptop">
+                        Mira los últimos GIFOS de nuestra comunidad.
+                    </p>
+                </div>
+
+
+                <div class="slideshow">
+
+                    <button class="slideshow__before" id="slideshow__before"> &#xe903; </button>
+
+                    <div class="slideshow__cards">
+                    
+                         <!-- divTrendingContainer -->
+
+                    </div>
+
+                    <button class="slideshow__after" id="slideshow__after"> &#xe904; </button>
+
+                </div>
+
+            </section>
+
+             <!-- MODAL -->
+
+             <div class="modal" id="myModal">
+
+                <div class="modal-content">
+
+                    <button class="close-button" id="close-button">
+                        <span class="icon-button-close"></span>
+                    </button>
+
+                    <div class="modal__gif">
+                        <img class="modal__gif_img" id="modal_gif_img" >
+                    </div>
+
+                    <div class="modal__p-buttons"> 
+                        <div class="modal__p">
+                            <p class="modal_p" id="show_username_gif"></p>
+                            <p class="modal_p" id="show_title_gif"></p>
+                        </div>
+                    
+                        <div class="card__info--buttons modal__buttons" id="buttons_card">
+                            <button class="card__info--span" id="favorite-gif-Modal" >
+                                <span class="icon-icon-fav-active"></span></button>
+                            <button class="card__info--span" id="download-gif-Modal">
+                                <span class="icon-icon-download"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIN MODAL -->
+
+        </main>
+
+        <footer class="footer" aria-label="Footer" id="footer">
+
+            <p class="footer__p">
+                Compartir en:
+            </p>
+
+            <div class="footer__socialmedia">
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a> </div>
+
+                <div>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter"> </i> </a> </div>
+
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"> </i> </a> </div>
+            </div>
+
+            <p class="footer__copyright">
+                © GIFOS 2020 All Rights Reserved.
+            </p>
+
+        </footer>
+        <hr class="footer__hr">
+
+    </div>
+    <div class="gifos-msg"></div>
+    <script src="https://kit.fontawesome.com/7396023e43.js" crossorigin="anonymous"></script>
+    <script type="module" src="scripts/main_favorites.js"></script>
+
+</body>
+
+</html>

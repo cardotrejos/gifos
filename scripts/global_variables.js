@@ -1,8 +1,4 @@
 
-/**
- * Global variables
- */
-
 const api_key = '9p3u62oTEKySNV81aH9qU6RPHCdI4Vn1';
 
 const searchURL = 'https://api.giphy.com/v1/gifs/search';

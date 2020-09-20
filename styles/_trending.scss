@@ -1,0 +1,150 @@
+/* 
+========================================================================== */
+/* Trending
+==========================================================================
+ */
+
+ .trending{
+    position: relative;
+    background: $bg_trending;
+    //background: var(--bg_trending);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 26.9em;
+    width: 100%;
+
+    &__h2{
+        @include h2_mobile();
+        padding-top: 2em;
+     }
+
+    &__p--mobile{
+        @include paragraph_mobile();
+        font-size: 1em;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__p--laptop{
+        display: none;
+    }
+ }
+
+ /* Slideshow */
+
+.slideshow{
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+
+    &__cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: scroll;
+        overflow: hidden;
+    
+    }
+
+    &__before{
+        display: none;  
+      
+    }
+
+    &__after{
+        display: none;  
+      }
+}
+
+/* 
+========================================================================== */
+/* Trending
+/* 64em = 1024px @ 16px font
+==========================================================================
+*/
+    
+@media screen and (min-width:1024px) {
+
+        .trending{
+
+            height: 35em;
+
+            &__h2{
+                @include h2_laptop();
+                margin: 0em;
+            }
+    
+
+            &__p--laptop{
+                @include paragraph_laptop();
+                font-size: 1.125em;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+
+            }
+
+            &__p--mobile{
+                display: none;
+
+            }
+       
+        }
+
+    /* Slideshow */
+
+        .slideshow{
+
+            &__before{
+                display: flex;
+                justify-content: center;  
+                align-items: center;
+                color: $font_color;
+                background: $white;
+                border: 1px solid $font_color;
+                width: 2.5em;
+                height: 2.5em;
+                font-size: 1em;
+                font-family: $font_gifos;
+                font-weight: bold; 
+                margin: 0.5em;
+            }
+    
+            &__before:hover{
+                color: $white;
+                background: $font_color;
+                
+            }
+          
+            &__after{ 
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                color: $font_color; 
+                background: $white;
+                border: 1px solid $font_color;
+                width: 2.5em;
+                height: 2.5em;
+                font-size: 1em; 
+                font-family: $font_gifos;
+                font-weight: bold;  
+                margin: 0.5em;        
+    
+            }
+    
+            &__after:hover{
+                color: $white;
+                background: $font_color;
+                border: 1px solid $font_color;
+                
+            }
+        }
+        
+    }

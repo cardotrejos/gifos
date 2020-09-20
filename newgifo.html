@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: gifOS - DianaP3</title>
+    <meta name="title" content="Proyecto gifOS">
+    <meta name="description" content="Proyecto: gifOS">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="icon" sizes="32x32" href="./assets/logo-desktop.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/gifos_font.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <div class="content">
+
+        <header class="header" id="header">
+            <hr class="header__hr">
+            <nav class="header__navbar">
+                <a href="index.html" class="header__navbar--logo"></a>
+
+
+                <input class="header__navbar--checkbox" type="checkbox">
+                <img class="header__navbar--ham-menu" src="./assets/burger.svg" alt="Menú">
+                <img class="header__navbar--close-ham-menu" src="./assets/close.svg" alt="Menú">
+                <div class="header__navbar--menu">
+                    <ul class="list">
+                        <li class="list__item"><a class="dark_mode"><span id="dark_ligth">Modo Nocturno</span></a></li>
+                        <li class="list__item"><a href="favorites.html">Favoritos</a></li>
+                        <li class="list__item"><a href="mygifos.html">Mis GIFOS</a></li>
+                    </ul>
+                </div>
+                <a class="header__navbar--new_gifoactive" href="#"> + </a>
+            </nav>
+
+
+        </header>
+
+        <main class="newGifo_main">
+
+
+
+            <section class="newGifo_record" id="newGifo_record">
+                <div class="newGifo__cameraImage" id="newGifo_cameraImage">
+                    <div class="newGifo__camera"> </div>
+                    <img class="newGifo__light" src="../assets/element-luz-camara.svg">
+                </div>
+
+                <!-- Margin and corners of Video Conteiner -->
+                <div class="record_video" id="record_video">
+                    <div class="record_video__corners" id="recordVideoCorners">
+                        <!-- Video Conteiner -->
+                        <div class="video_conteiner" id="divVideoContainer">
+                            <video class="record_video__video hidden" id="videoTag" src="#"></video>
+
+                            <!-- Preview GIFO -->
+                            <div class="preview_gifo" id="divPreviewGifo">
+                                <img class="record_video__video hidden" id="previewGif" src="#">
+
+                                <!-- Hover Preview GIFO -->
+
+                                <!-- add class preview_gifo__hover - remove class hidden -->
+                                <div class="hidden" id="previewGifoHover">
+
+                                    <!-- add class preview_gifo__buttons - remove class hidden -->
+                                    <div class="hidden" id="buttonsPreviewGifo">
+                                        <button class="card__info--span" id="download-gif-Modal">
+                                            <span class="icon-icon-download"></span></button>
+                                        <a class="card__info--span show-modal" id="linkNewGifo" href="" target="_blank" >
+                                            <span class="icon-icon-link"></span></a>
+                                    </div>
+
+                                    <!-- add preview_gifo__uploading - remove class hidden -->
+                                    <div class="hidden" id="gifoUploading">
+                                        <div><span class="icon-loader"></span></div>
+                                        <h3 class="preview_gifo__uploading--p">
+                                            Estamos subiendo tu GIFO
+                                        </h3>
+
+                                    </div>
+                                     <!-- add preview_gifo__uploading - remove class hidden -->
+                                     <div class="hidden" id="gifoUploaded">
+                                        <div><span class="icon-check"></span></div>
+                                        <h3 class="preview_gifo__uploading--p">
+                                            GIFO subido con éxito
+                                        </h3>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END Preview GIFO -->
+
+                            <!-- Intro New GIFO -->
+                            <div class="newVideoInfo" id="newVideoInfo">
+                                <h3 class="record_video__h3" id="record_video__h3">Aquí podrás <br /> crear tus propios
+                                    <span class="h1_green">GIFOS</span></h3>
+                                <p class="record_video__p" id="record_video__p">¡Crea tu GIFO en sólo 3 pasos! <br />
+                                    (sólo necesitas una cámara para grabar un video)</p>
+                            </div>
+                            <!-- END Intro New GIFO -->
+                        </div>
+                        <!-- Video Conteiner -->
+                    </div>
+                </div>
+                <!-- END Margin and corners of Video Conteiner -->
+            </section>
+
+            <section class="record_steps" id="recordSteps">
+                <div class="record_steps__numbers" id="RecordStepsNumber">
+                    <a class="record_steps__buttons" id="recordStep1">1</a>
+                    <a class="record_steps__buttons" id="recordStep2">2</a>
+                    <a class="record_steps__buttons" id="recordStep3">3</a>
+                </div>
+                <div class="timer hidden" id="timer">
+                    00:00:00
+                </div>
+                <div class="timer hidden" id="repeatRecording">
+                    REPETIR CAPTURA
+                </div>
+            </section>
+
+            <section class="record_hr" id="record_hr">
+                <hr class="record_hr__hr">
+                <div class="record_hr__tape_image" id="tape_image"> </div>
+            </section>
+
+            <section class="record__button">
+                <button class="record__buttons" id="buttonStart">Comenzar</button>
+                <button class="record__buttons hidden" id="buttonRecord">Grabar</button>
+                <button class="record__buttons hidden" id="buttonFinish">Finalizar</button>
+                <button class="record__buttons hidden" id="buttonUpload">Subir Gifo</button>
+
+            </section>
+
+        </main>
+
+        <footer class="footer" aria-label="Footer" id="footer">
+
+            <p class="footer__p">
+                Compartir en:
+            </p>
+
+            <div class="footer__socialmedia">
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a> </div>
+
+                <div>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter"> </i> </a> </div>
+
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"> </i> </a> </div>
+            </div>
+
+            <p class="footer__copyright">
+                © GIFOS 2020 All Rights Reserved.
+            </p>
+
+        </footer>
+        <hr class="footer__hr">
+
+
+    </div>
+    <div class="gifos-msg"></div>
+    <script src="https://kit.fontawesome.com/7396023e43.js" crossorigin="anonymous"></script>
+    <!-- recommended -->
+    <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <!--<script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script> -->
+    <script type="module" src="scripts/main_newgifo.js"></script>
+
+</body>
+
+</html>
