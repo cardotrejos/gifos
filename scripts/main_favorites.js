@@ -1,5 +1,5 @@
 import { getTrendingGif, EventListener_Slideshow } from './trending.js';
-import { addEventCloseModal } from '../../../../../gifOS-master/scripts/modal.js';
+import { addEventCloseModal } from './modal.js';
 import { changeTheme, verifyTheme } from './darkmode.js';
 import { loadFavorites, addEventListenerFavViewMore } from './favorites.js';
 import { addEventFavModal } from './favorites.js';

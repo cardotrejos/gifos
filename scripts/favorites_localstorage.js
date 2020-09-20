@@ -1,6 +1,5 @@
 import { LOCAL_STORAGE_FAVORITE_GIFS } from './global_variables.js';
 
-
 const addGifLocalStorage = ((selectedGif) => {
   let gifSelected = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FAVORITE_GIFS)) || [];
   gifSelected.push(selectedGif);
@@ -32,6 +31,5 @@ const existGifIDLocalStorage = ((gif_id) => {
     return false;
   }
 });
-
 
 export { addGifLocalStorage, removeGifLocalStorage, getAllGifLocalStorage, existGifIDLocalStorage };

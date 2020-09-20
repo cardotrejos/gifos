@@ -9,8 +9,6 @@ let allHTMLFavResults;
 const favViewMoreButton = document.getElementById('favResultsButton');
 const maxGifsToShow = 12;
 
-
-
 const loadFavorites = ((offset) => {
 
   if (divFavGridContainer) {
